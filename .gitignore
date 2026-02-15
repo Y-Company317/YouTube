@@ -5,3 +5,40 @@
 *.pyc
 terminals/
 
+# ---------------------------------------------------------------------------
+# Safety: this repo is rooted at the home directory.
+# Prevent accidentally committing personal/system files.
+# We will explicitly add only the Obsidian vault content we care about.
+# ---------------------------------------------------------------------------
+
+# Ignore everything at repo root by default
+/*
+
+# Allow gitignore itself
+!.gitignore
+
+# Whitelist: Obsidian vault we want to version
+!Library/
+/Library/*
+!Library/Mobile Documents/
+/Library/Mobile Documents/*
+!Library/Mobile Documents/iCloud~md~obsidian/
+/Library/Mobile Documents/iCloud~md~obsidian/*
+!Library/Mobile Documents/iCloud~md~obsidian/Documents/
+/Library/Mobile Documents/iCloud~md~obsidian/Documents/*
+!Library/Mobile Documents/iCloud~md~obsidian/Documents/YouTube/
+/Library/Mobile Documents/iCloud~md~obsidian/Documents/YouTube/*
+!Library/Mobile Documents/iCloud~md~obsidian/Documents/YouTube/YouTube/
+!Library/Mobile Documents/iCloud~md~obsidian/Documents/YouTube/YouTube/**
+
+# Obsidian: ignore volatile/cache/workspace (keep the rest)
+**/.obsidian/cache/
+**/.obsidian/workspace.json
+**/.obsidian/workspace-mobile.json
+
+# Secrets / credentials (never commit)
+**/client_secret*.json
+**/token.pickle
+**/*.pickle
+**/.env
+**/.env.*
