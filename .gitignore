@@ -34,9 +34,7 @@ terminals/
 # Obsidian: ignore volatile/cache/workspace (keep the rest)
 **/.obsidian/cache/
 **/.obsidian/workspace.json
-**/.obsidian/workspace-mobile.json
-
-# Secrets / credentials (never commit)
+**/.obsidian/workspace-mobile.json# Secrets / credentials (never commit)
 **/client_secret*.json
 **/token.pickle
 **/*.pickle
